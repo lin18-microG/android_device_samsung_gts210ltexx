@@ -3,6 +3,9 @@ LOCAL_PATH := device/samsung/gts210ltexx
 # Display
 SF_PRIMARY_DISPLAY_ORIENTATION := 270
 
+# Hidl
+DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
+
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
