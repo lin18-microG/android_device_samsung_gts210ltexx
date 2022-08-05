@@ -37,6 +37,13 @@
 /dev/v4l-subdev20         0660   system     graphics
 /dev/v4l-subdev21         0660   system     graphics
 
+# MobiCore
+/dev/mobicore             0700   system     system
+/dev/mobicore-user        0660   radio      system
+
+# Secure MEM driver
+/dev/s5p-smem             0660   system system
+
 # gscalers
 /dev/video23              0660   media      graphics
 /dev/video26              0660   media      drmrpc
@@ -51,7 +58,7 @@
 /dev/video50              0666   media      graphics
 /dev/video51              0666   media      graphics
 /dev/m2m1shot_scaler0     0660   cameraserver     graphics
-/dev/m2m1shot_scaler1     0660   cameraserver       graphics
+/dev/m2m1shot_scaler1     0660   cameraserver     graphics
 
 /dev/video55              0666   system     graphics
 /dev/fimg2d               0666   system     graphics
@@ -111,7 +118,7 @@
 /dev/iio:device*          0660   system		system
 /sys/devices/14d20000.spi/spi_master/spi0/spi0.0/iio:device*    buffer/enable       0660    system    system
 /sys/devices/14d20000.spi/spi_master/spi0/spi0.0/iio:device*    buffer/length       0660    system    system
-/sys/bus/iio/devices/iio:device*    0664   system     radio
+#/sys/bus/iio/devices/iio:device*    0664   system     radio
 
 # fingerprint sensor
 /dev/vfsspi        0660   system     system
@@ -140,7 +147,7 @@
 /dev/iio:device*      0760  system   radio
 
 # accel, gyro
-/sys/devices/iio:device*		0760  system   radio
+#/sys/devices/iio:device*		0760  system   radio
 /sys/devices/iio:device* name		0760  system   radio
 /sys/devices/iio:device* sampling_frequency		0760  system   radio
 /sys/devices/iio:device* sampling_frequency_available	0760  system   radio
@@ -198,7 +205,7 @@
 /sys/devices/iio:device* events/in_tilt_thresh_rising_value		0760  system   radio
 
 # mag
-/sys/devices/14de0000.hsi2c/i2c-7/7-002e/iio:device*		0760  system   radio
+#/sys/devices/14de0000.hsi2c/i2c-7/7-002e/iio:device*		0760  system   radio
 /sys/devices/14de0000.hsi2c/i2c-7/7-002e/iio:device* name	0760  system   radio
 /sys/devices/14de0000.hsi2c/i2c-7/7-002e/iio:device* static_matrix	0760  system   radio
 /sys/devices/14de0000.hsi2c/i2c-7/7-002e/iio:device* sampling_frequency		0760  system   radio
@@ -233,7 +240,7 @@
 /sys/devices/14de0000.hsi2c/i2c-7/7-002e/iio:device* power/runtime_suspended_time	0760  system   radio
 
 # light
-/sys/devices/14de0000.hsi2c/i2c-7/7-001c/iio:device*		0760  system   radio
+#/sys/devices/14de0000.hsi2c/i2c-7/7-001c/iio:device*		0760  system   radio
 /sys/devices/14de0000.hsi2c/i2c-7/7-001c/iio:device* name	0760  system   radio
 /sys/devices/14de0000.hsi2c/i2c-7/7-001c/iio:device* static_matrix	0760  system   radio
 /sys/devices/14de0000.hsi2c/i2c-7/7-001c/iio:device* sampling_frequency		0760  system   radio
@@ -266,7 +273,7 @@
 /sys/devices/14de0000.hsi2c/i2c-7/7-001c/iio:device* power/runtime_suspended_time	0760  system   radio
 
 # grip
-/sys/devices/i2c.32/i2c-11/11-0028/iio:device*						0760  system   radio
+#/sys/devices/i2c.32/i2c-11/11-0028/iio:device*						0760  system   radio
 /sys/devices/i2c.32/i2c-11/11-0028/iio:device* buffer					0760  system   radio
 /sys/devices/i2c.32/i2c-11/11-0028/iio:device* buffer/enable				0760  system   radio
 /sys/devices/i2c.32/i2c-11/11-0028/iio:device* buffer/length				0760  system   radio
@@ -275,7 +282,7 @@
 /sys/devices/i2c.32/i2c-11/11-0028/iio:device* scan_elements/in_grip_voltage_en		0760  system   radio
 /sys/devices/i2c.32/i2c-11/11-0028/iio:device* scan_elements/in_timestamp_en		0760  system   radio
 /sys/devices/i2c.32/i2c-11/11-0028/iio:device* scan_elements				0760  system   radio
-/sys/devices/i2c.33/i2c-11/11-0028/iio:device*						0760  system   radio
+#/sys/devices/i2c.33/i2c-11/11-0028/iio:device*						0760  system   radio
 /sys/devices/i2c.33/i2c-11/11-0028/iio:device* buffer					0760  system   radio
 /sys/devices/i2c.33/i2c-11/11-0028/iio:device* buffer/enable				0760  system   radio
 /sys/devices/i2c.33/i2c-11/11-0028/iio:device* buffer/length				0760  system   radio
@@ -286,7 +293,7 @@
 /sys/devices/i2c.33/i2c-11/11-0028/iio:device* scan_elements				0760  system   radio
 
 # grip wifi
-/sys/devices/i2c.33/i2c-12/12-0028/iio:device*						0760  system   radio
+#/sys/devices/i2c.33/i2c-12/12-0028/iio:device*						0760  system   radio
 /sys/devices/i2c.33/i2c-12/12-0028/iio:device* buffer					0760  system   radio
 /sys/devices/i2c.33/i2c-12/12-0028/iio:device* buffer/enable				0760  system   radio
 /sys/devices/i2c.33/i2c-12/12-0028/iio:device* buffer/length				0760  system   radio
@@ -295,7 +302,7 @@
 /sys/devices/i2c.33/i2c-12/12-0028/iio:device* scan_elements/in_grip_wifi_current_en	0760  system   radio
 /sys/devices/i2c.33/i2c-12/12-0028/iio:device* scan_elements/in_timestamp_en		0760  system   radio
 /sys/devices/i2c.33/i2c-12/12-0028/iio:device* scan_elements				0760  system   radio
-/sys/devices/i2c.34/i2c-12/12-0028/iio:device*						0760  system   radio
+#/sys/devices/i2c.34/i2c-12/12-0028/iio:device*						0760  system   radio
 /sys/devices/i2c.34/i2c-12/12-0028/iio:device* buffer					0760  system   radio
 /sys/devices/i2c.34/i2c-12/12-0028/iio:device* buffer/enable				0760  system   radio
 /sys/devices/i2c.34/i2c-12/12-0028/iio:device* buffer/length				0760  system   radio
