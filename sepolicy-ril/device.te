@@ -1,0 +1,4 @@
+type alarm_device, dev_type;
+type mif_device, dev_type;
+type knox_device, dev_type;
+type emmcblk_device, file_type;

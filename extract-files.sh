@@ -56,14 +56,29 @@ fi
 function blob_fixup() {
     case "${1}" in
         vendor/lib/libsec-ril.so)
-            "${PATCHELF}" --replace-needed "libcutils.so" "libcutils-v29.so" "${2}"
+            "${PATCHELF}" --replace-needed "libcutils.so" "libcutils-v29.so" --replace-needed "libprotobuf-cpp-fast.so" "libprotobuf-cpp-fl26.so" "${2}"
+            ;;
+    case "${1}" in
+        vendor/lib/mediadrm/libwvdrmengine.so)
+            "${PATCHELF}" --replace-needed libprotobuf-cpp-lite.so libprotobuf-cpp-lite-v29.so "${2}"
+            ;;
+    case "${1}" in
+        vendor/lib/libwvhidl.so)
+            "${PATCHELF}" --replace-needed libprotobuf-cpp-lite.so libprotobuf-cpp-lite-v29.so "${2}"
             ;;
     esac
 }
 
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
-
+echo "extract-files.sh ${PATCHELF}"
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+
+#
+#BLOB_ROOT="$ANDROID_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
+#if needed to change from original Samsung muppetized library names
+#sed -i 's|libprotobuf-cpp-fulN.so|libprotobuf-cpp-full.so|g' $BLOB_ROOT/vendor/lib/libwvhidl.so
+#sed -i 's|libprotobuf-cpp-fulN.so|libprotobuf-cpp-full.so|g' $BLOB_ROOT/vendor/lib/libsec-ril.so
+(perl -pi -e "s/\/system\/bin\/gpsd/\/vendor\/bin\/gpsd/g" $BLOB_ROOT/system/lib/libsec-ril.so)
 
 "${MY_DIR}/setup-makefiles.sh"

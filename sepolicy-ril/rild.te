@@ -1,0 +1,53 @@
+allow rild radio_data_file:dir create_dir_perms;
+allow rild radio_data_file:file create_file_perms;
+allow rild alarm_device:chr_file r_file_perms;
+allow rild factorymode_factoryapp_efs_file:file r_file_perms;
+allow rild sysfs_multipdp_writable:file w_file_perms;
+allow rild app_efs_file:file { getattr open read };
+allow rild app_efs_file:dir search;
+allow rild device:chr_file { open read };
+allow rild proc_net:file write;
+
+allow rild gpsd:dir search;
+allow rild gpsd:file { getattr open read };
+
+# gpsd
+allow gpsd rild:unix_stream_socket connectto;
+
+# /dev/umts_boot0, /dev/umts_ipc0
+allow rild mif_device:chr_file { ioctl rw_file_perms };
+
+set_prop(rild, net_radio_prop)
+
+# Set property
+allow rild default_prop:property_service set;
+
+# rild reads /proc/pid/cmdline of mediaserver
+r_dir_file(rild, mediaserver);
+
+# /dev/knox_kap
+allow rild knox_device:chr_file r_file_perms;
+
+# /data/misc/radio/*
+allow rild system_data_file:dir rw_dir_perms;
+allow rild system_data_file:file create_file_perms;
+allow rild system_data_file:lnk_file r_file_perms;
+
+# /efs
+allow rild sec_efs_file:dir search;
+allow rild sec_efs_file:file r_file_perms;
+allow rild bin_nv_data_efs_file:file getattr;
+
+allow rild imei_efs_file:dir search;
+allow rild imei_efs_file:file { getattr open read };
+
+allow rild block_device:blk_file { open read };
+allow rild block_device:dir search;
+
+# Phone application
+allow radio gpuservice:binder call;
+
+allow audioserver rild:unix_stream_socket { connectto };
+allow rild audioserver:dir search;
+allow rild audioserver:file { getattr open read };
+allow hal_sensors_default system_data_root_file:dir { open write };

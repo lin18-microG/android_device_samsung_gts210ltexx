@@ -115,7 +115,6 @@
   <ctl name="DAC Comp" value="0 0 0 1" />
   <ctl name="FRF Coefficients" value="14 104 231 142 13 28 252 210" />
 
-
   <!--HW DRE default Off -->
   <ctl name="HPOUT DRE Switch" value="1" />
   <ctl name="HPOUT EDRE Switch" value="1" />
@@ -389,9 +388,9 @@
   </path>
 
   <path name="gain-incall_nb-speaker">
-    <ctl name="Speaker Digital Volume" value="123" />
-    <ctl name="SPKOUTL Input 1 Volume" value="35" />
-    <ctl name="SPKOUTR Input 1 Volume" value="35" />
+    <ctl name="Speaker Digital Volume" value="128" />
+    <ctl name="SPKOUTL Input 1 Volume" value="32" />
+    <ctl name="SPKOUTR Input 1 Volume" value="32" />
   </path>
 
   <path name="gain-incall_nb-headset">
@@ -468,15 +467,15 @@
   </path>
 
   <path name="gain-incall_nb-speaker-mic">
-    <ctl name="IN1L Volume" value="20" />
-    <ctl name="IN1L Digital Volume" value="127" />
-    <ctl name="LHPF1 Input 1 Volume" value="49" />
+    <ctl name="IN1L Volume" value="30" />
+    <ctl name="IN1L Digital Volume" value="145" />
+    <ctl name="LHPF1 Input 1 Volume" value="45" />
   </path>
 
   <path name="gain-incall_nb-headset-mic">
-    <ctl name="IN2 Volume" value="21" />
-    <ctl name="IN2 Digital Volume" value="127" />
-    <ctl name="LHPF1 Input 1 Volume" value="49" />
+    <ctl name="IN2 Volume" value="30" />
+    <ctl name="IN2 Digital Volume" value="145" />
+    <ctl name="LHPF1 Input 1 Volume" value="45" />
   </path>
 
   <path name="gain-incall_wb-handset-mic">
