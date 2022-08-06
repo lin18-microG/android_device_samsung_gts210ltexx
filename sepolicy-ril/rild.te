@@ -36,7 +36,6 @@ allow rild system_data_file:lnk_file r_file_perms;
 # /efs
 allow rild sec_efs_file:dir search;
 allow rild sec_efs_file:file r_file_perms;
-allow rild bin_nv_data_efs_file:file getattr;
 
 allow rild imei_efs_file:dir search;
 allow rild imei_efs_file:file { getattr open read };
@@ -49,5 +48,5 @@ allow radio gpuservice:binder call;
 
 allow audioserver rild:unix_stream_socket { connectto };
 allow rild audioserver:dir search;
-allow rild audioserver:file { getattr open read };
+allow rild audioserver:file rw_file_perms;
 allow hal_sensors_default system_data_root_file:dir { open write };

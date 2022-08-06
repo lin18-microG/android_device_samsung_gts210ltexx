@@ -17,6 +17,13 @@ on init
     write /proc/sys/net/core/netdev_max_backlog 8192
     chmod 0644 /proc/cmdline
 
+    chmod 770 /efs/nv_data.bin
+    chmod 770 /efs/nv_data.bin.md5
+    chmod 770 /efs/.nv_core.bak
+    chmod 770 /efs/.nv_core.bak.md5
+    chmod 770 /efs/.nv_state
+    chmod 770 /efs/nv.log
+
 on early-boot
 # Assign TCP buffer thresholds to be ceiling value of technology maximums
 # Increased technology maximums should be reflected here.
