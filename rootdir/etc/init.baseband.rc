@@ -36,10 +36,10 @@ on fs
     chmod 0660 /sys/devices/virtual/misc/umts_dm0/dm_state
     chown radio system /sys/devices/virtual/misc/umts_dm0/dm_state
 
-# Parse hardware revision (needs to happen before cbd starts)
-service modemloader /vendor/bin/modemloader
-    class core
-    oneshot
+# ijh - not needed any longer ( Parse hardware revision (needs to happen before cbd starts))
+#service modemloader /vendor/bin/modemloader
+#    class core
+#    oneshot
 
 # CP Boot Daemon (CBD)
 service cpboot-daemon /vendor/bin/cbd -d -t ss333 -b s -m l -p 13

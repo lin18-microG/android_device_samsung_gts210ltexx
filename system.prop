@@ -20,7 +20,8 @@ ro.telephony.get_imsi_from_sim=true
 ro.ril.force_eri_from_xml=true
 ro.bionic.2nd_arch=arm
 
-gsm.operator.iso-country=au
-gsm.sim.operator.numeric=5050390
+#gsm.operator.iso-country=au
+#gsm.sim.operator.numeric=5050390
 
 ro.ril.fast.dormancy.rule=0
+lineage.updater.uri=https://lineageota.azurewebsites.net/api/v1/{device}/{type}/{incr}
