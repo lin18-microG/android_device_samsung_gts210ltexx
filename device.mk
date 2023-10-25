@@ -1,4 +1,4 @@
-LOCAL_PATH := device/samsung/gts28ltexx
+LOCAL_PATH := device/samsung/gts210ltexx
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -15,7 +15,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
-    device/samsung/gts28ltexx/overlay
+    device/samsung/gts210ltexx/overlay
 
 # Radio
 PRODUCT_PACKAGES += \
@@ -52,4 +52,4 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml
 
 # call the proprietary setup
-$(call inherit-product, vendor/samsung/gts28ltexx/gts28ltexx-vendor.mk)
+$(call inherit-product, vendor/samsung/gts210ltexx/gts210ltexx-vendor.mk)
