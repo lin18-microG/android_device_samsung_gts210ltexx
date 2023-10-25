@@ -21,8 +21,8 @@
 #define DTBH_MAGIC         "DTBH"
 #define DTBH_VERSION       2
  /* taken from stock dtb.image (strings dtb.img) */
-#define DTBH_PLATFORM      "cgts210"
-#define DTBH_SUBTYPE       "wgts210_eur_open"
+#define DTBH_PLATFORM      "gts210"
+#define DTBH_SUBTYPE       "gts210_eur_open"
  /* Hardcoded entry
   *
   * Taken from /proc/last_kmsg after 'reboot bootloader'
