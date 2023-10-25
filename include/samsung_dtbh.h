@@ -21,14 +21,14 @@
 #define DTBH_MAGIC         "DTBH"
 #define DTBH_VERSION       2
  /* taken from stock dtb.image (strings dtb.img) */
-#define DTBH_PLATFORM      "gts28"
-#define DTBH_SUBTYPE       "gts28_eur_open"
+#define DTBH_PLATFORM      "cgts210"
+#define DTBH_SUBTYPE       "wgts210_eur_open"
  /* Hardcoded entry
   *
   * Taken from /proc/last_kmsg after 'reboot bootloader'
   */
-#define DTBH_PLATFORM_CODE 0x3138
-#define DTBH_SUBTYPE_CODE  0x36480ee3
+#define DTBH_PLATFORM_CODE 0x0000347e
+#define DTBH_SUBTYPE_CODE  0x88668650
 
 /* DTBH_MAGIC + DTBH_VERSION + DTB counts */
 #define DT_HEADER_PHYS_SIZE 12
