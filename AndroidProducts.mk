@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_gts28ltexx.mk
+    $(LOCAL_DIR)/lineage_gts210ltexx.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_gts28ltexx-user \
-    lineage_gts28ltexx-userdebug \
-    lineage_gts28ltexx-eng
+    lineage_gts210ltexx-user \
+    lineage_gts210ltexx-userdebug \
+    lineage_gts210ltexx-eng
