@@ -28,3 +28,8 @@ include device/samsung/gts2-common/BoardConfigCommon.mk
 #   board config so we need to explicitly set here again.
 LOCAL_PATH := device/samsung/gts210ltexx
 DEVICE_MANIFEST_FILE += $(LOCAL_PATH)/manifest.xml
+
+# Display
+#   Displayed screen was rotated clockwise by 90 degrees
+#   but touchscreen reacts as it was not rotated
+SF_PRIMARY_DISPLAY_ORIENTATION := 270
