@@ -1,0 +1,2 @@
+# Allows setting interface MTU
+allow netd sysfs:file { read open write };
