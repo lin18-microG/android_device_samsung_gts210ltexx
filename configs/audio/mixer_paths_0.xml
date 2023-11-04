@@ -181,6 +181,7 @@
 
   <path name="incall_nb-speaker">
     <ctl name="AIF2 Mode" value="Slave" />
+    <ctl name="Sample Rate 3" value="16kHz" />
     <ctl name="ASRC RATE 2" value="ASYNCCLK rate 2" />
     <ctl name="ISRC2INT1 Input" value="AIF2RX1" />
     <ctl name="ISRC2INT2 Input" value="AIF2RX1" />
@@ -198,6 +199,7 @@
 
   <path name="incall_nb-headset">
     <ctl name="AIF2 Mode" value="Slave" />
+    <ctl name="Sample Rate 1" value="48kHz" />
     <ctl name="ASRC RATE 2" value="ASYNCCLK rate 2" />
     <ctl name="HPOUT EDRE Switch" value="0" />
     <ctl name="ISRC2INT1 Input" value="AIF2RX1" />
@@ -497,8 +499,8 @@
   <!-- Paths for the audio HAL (we map this to the Samsung paths) -->
 
   <path name="earpiece">
-    <path name="media-handset" />
-    <path name="gain-media-handset" />
+    <path name="media-speaker" />
+    <path name="gain-media-speaker" />
   </path>
 
   <path name="speaker">
@@ -517,8 +519,8 @@
   </path>
 
   <path name="voice-earpiece">
-    <path name="incall_nb-handset" />
-    <path name="gain-incall_nb-handset" />
+    <path name="incall_nb-speaker" />
+    <path name="gain-incall_nb-speaker" />
   </path>
 
   <path name="voice-speaker">
@@ -532,8 +534,8 @@
   </path>
 
   <path name="voice-earpiece-wb">
-    <path name="incall_wb-handset" />
-    <path name="gain-incall_wb-handset" />
+    <path name="incall_wb-speaker" />
+    <path name="gain-incall_wb-speaker" />
   </path>
 
   <path name="voice-speaker-wb">
