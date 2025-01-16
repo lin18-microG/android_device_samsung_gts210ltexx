@@ -24,4 +24,3 @@ ro.bionic.2nd_arch=arm
 #gsm.sim.operator.numeric=5050390
 
 ro.ril.fast.dormancy.rule=0
-lineage.updater.uri=https://lineageota.azurewebsites.net/api/v1/{device}/{type}/{incr}
